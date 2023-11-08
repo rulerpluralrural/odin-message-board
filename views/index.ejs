@@ -7,22 +7,22 @@
 		<title><%= title %></title>
 	</head>
 	<body>
-		<div>
-			<h1><%= title %></h1>
-			<div>
+		<div class="message-board">
+			<h1 class="message-header"><%= title %></h1>
+			<div class="message-container">
 				<% messages.map(message => { %>
-				<div>
-					<div>
+				<div class="messages">
+					<div class="message-left">
 						<p><%= message.user %></p>
-						<p><%= message.text %></p>
+						<p>- <%= message.text %></p>
 					</div>
-					<div>
+					<div class="message-right">
 						<p><%= message.added %></p>
 					</div>
 				</div>
 				<% }); %>
 			</div>
-			<a href="/new">Add new message...</a>
+			<a class="add-message" href="/new">Add new message</a>
 		</div>
 	</body>
 </html>

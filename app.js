@@ -12,11 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/", require("./routes/index.js"));
-app.use("/new", require("./routes/index.js"));
-app.all("*", (req, res) => {
-	res.sendStatus(404);
-});
 
-app.listen(PORT, () => {
+app.listen(PORT, (err) => {
+	if (err) console.log(err)
 	console.log(`Server listening on port ${PORT}`);
 });

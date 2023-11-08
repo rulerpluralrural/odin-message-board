@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--dark-blue: rgb(38, 35, 48);
+	--gray: rgb(14, 14, 24);
+	--light-clr: rgb(231, 228, 248);
+}
+
+body {
+	background-color: var(--gray);
+	color: var(--dark-blue);
+	font-family: "Times New Roman", Times, serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+h1 {
+	font-weight: 600;
+	font-size: 2.1rem;
+	color: var(--light-clr);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.message-board {
+	height: 100%;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+.message-header {
+	padding: 0.8rem;
+	padding-bottom: 0;
+	text-align: center;
+	width: 100%;
+	border-bottom: 3px solid var(--light-clr);
+}
+
+.message-container {
+	background-color: rgb(216, 211, 240);
+	padding: 1rem;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.messages {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0.5rem;
+	border-bottom: 1px solid;
+}
+
+.messages:last-child {
+	border-bottom: none;
+}
+
+.message-left {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+
+.message-left p:first-child {
+	font-weight: bold;
+}
+
+.message-right {
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+.message-right p {
+	margin-top: 0.167rem;
+}
+
+.add-message {
+	width: 100%;
+	text-align: center;
+	padding: 0.7rem;
+	background-color: var(--light-clr);
+	font-weight: bold;
+	text-transform: uppercase;
+    transition: opacity 200ms ease-in;
+}
+
+.add-message:hover {
+	opacity: 0.8;
+}
+
+/** Form Page Styling */
+
+.form-container {
+	height: 100%;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.7rem;
+}
+
+.form-header {
+	text-align: center;
+	border-bottom: 3px solid var(--light-clr);
+}
+
+.form-body {
+	width: 500px;
+	color: var(--light-clr);
+}
+
+.form-body form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.input-control {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.input-control label {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.input-control input {
+    padding: .5rem;
+    background-color: var(--light-clr);
+    border: none;
+    border-radius: 3px;
+}
+
+.submit-btn {
+    background-color: var(--light-clr);
+    color: var(--dark-blue);
+    padding: .4rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    margin-top: .4rem;
+    transition: opacity 150ms ease-in;
+}
+
+.submit-btn:hover {
+    opacity: .8;
+}
+
+.home-pg-btn {
+    text-align: center;
+    text-decoration: underline;
+    color: var(--light-clr);
+}
+
+.home-pg-btn:hover {
+    color: blue;
+}

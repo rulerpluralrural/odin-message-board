@@ -7,32 +7,32 @@
 		<title><%= title %></title>
 	</head>
 	<body>
-		<div>
-			<h1>Input your message</h1>
-			<div>
+		<div class="form-container">
+			<h1 class="form-header">Type your message</h1>
+			<div class="form-body">
 				<form action="POST" method="/new">
-					<div>
-						<label for="userName"></label>
+					<div class="input-control">
+						<label for="userName">Name:</label>
 						<input
 							type="text"
 							name="userName"
 							id="userName"
-							placeholder="type your name here..."
+							placeholder="Type your name here..."
 						/>
 					</div>
-					<div>
-						<label for="message"></label>
+					<div class="input-control">
+						<label for="message">Message:</label>
 						<input
 							type="text"
 							name="messageText"
 							id="messageText"
-							placeholder="type your message here..."
+							placeholder="Type your message here..."
 						/>
 					</div>
-					<button type="submit">Submit</button>
+					<button class="submit-btn" type="submit">Submit</button>
 				</form>
 			</div>
-            <a href="/">Go back to home page...</a>
+            <a class="home-pg-btn" href="/">Go back to home page...</a>
 		</div>
 	</body>
 </html>

@@ -22,6 +22,10 @@ router.get("/new", (req, res) => {
 	res.render("form", { title: "Mini Messageboard" });
 });
 
+router.get('*', (req, res) => {
+	res.render("error")
+})
+
 router.post('/new', (req,res) => {
 	messages.push({
 		text: req.body.messageText,
@@ -30,4 +34,6 @@ router.post('/new', (req,res) => {
 	})
 	res.redirect('/')
 })
+
+module.exports = router
 
