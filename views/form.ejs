@@ -10,7 +10,7 @@
 		<div class="form-container">
 			<h1 class="form-header">Type your message</h1>
 			<div class="form-body">
-				<form action="POST" method="/new">
+				<form action="/new" method="post">
 					<div class="input-control">
 						<label for="userName">Name:</label>
 						<input
@@ -18,15 +18,17 @@
 							name="userName"
 							id="userName"
 							placeholder="Type your name here..."
+							required
 						/>
 					</div>
 					<div class="input-control">
-						<label for="message">Message:</label>
+						<label for="messageText">Message:</label>
 						<input
 							type="text"
 							name="messageText"
 							id="messageText"
 							placeholder="Type your message here..."
+							required
 						/>
 					</div>
 					<button class="submit-btn" type="submit">Submit</button>

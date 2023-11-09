@@ -22,18 +22,22 @@ router.get("/new", (req, res) => {
 	res.render("form", { title: "Mini Messageboard" });
 });
 
-router.get('*', (req, res) => {
-	res.render("error")
-})
+router.get("*", (req, res) => {
+	res.render("error");
+});
 
-router.post('/new', (req,res) => {
-	messages.push({
-		text: req.body.messageText,
-		user: req.body.userName,
-		added: new Date()
-	})
-	res.redirect('/')
-})
+router.post("/new", (req, res) => {
+	try {
+		messages.push({
+			text: req.body.messageText,
+			user: req.body.userName,
+			added: new Date(),
+		});
+	} catch (e) {
+		console.log(e.message);
+		res.send(e.message);
+	}
+	res.redirect("/");
+});
 
-module.exports = router
-
+module.exports = router;

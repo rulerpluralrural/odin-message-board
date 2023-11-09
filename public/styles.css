@@ -7,26 +7,27 @@
 }
 
 :root {
-	--dark-blue: rgb(38, 35, 48);
-	--gray: rgb(14, 14, 24);
-	--light-clr: rgb(231, 228, 248);
+	--dark-blue: rgb(19, 14, 36);
+	--gray: rgb(226, 226, 255);
+	--light-clr: rgb(247, 252, 232);
+	--peach-clr: rgb(252, 208, 155);
+	--green-clr: rgb(5, 248, 46);
 }
 
 body {
-	background-color: var(--gray);
+	background-color: var(--light-clr);
 	color: var(--dark-blue);
 	font-family: "Times New Roman", Times, serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
 }
 
 h1 {
 	font-weight: 600;
 	font-size: 2.1rem;
-	color: var(--light-clr);
+	color: var(--dark-blue);
 }
 
 a {
@@ -36,23 +37,23 @@ a {
 
 .message-board {
 	height: 100%;
-	margin-top: 2rem;
+	width: 100vw;
 	display: flex;
+	gap: 1rem;
 	flex-direction: column;
-	gap: 1.5rem;
 	align-items: center;
 }
 
 .message-header {
-	padding: 0.8rem;
-	padding-bottom: 0;
-	text-align: center;
 	width: 100%;
-	border-bottom: 3px solid var(--light-clr);
+	padding: 0.8rem;
+	text-align: center;
+	background-color: var(--peach-clr);
 }
 
 .message-container {
-	background-color: rgb(216, 211, 240);
+	width: 80%;
+	background-color: var(--gray);
 	padding: 1rem;
 	border-radius: 5px;
 	display: flex;
@@ -88,37 +89,39 @@ a {
 	font-style: italic;
 }
 
-.message-right p {
-	margin-top: 0.167rem;
-}
-
 .add-message {
-	width: 100%;
+	width: 20%;
 	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
 	padding: 0.7rem;
-	background-color: var(--light-clr);
+	background-color: var(--green-clr);
 	font-weight: bold;
 	text-transform: uppercase;
-    transition: opacity 200ms ease-in;
+    transition: opacity 100ms ease-in;
 }
 
 .add-message:hover {
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 /** Form Page Styling */
 
 .form-container {
 	height: 100%;
-	margin-top: 2rem;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 1.7rem;
 }
 
 .form-header {
 	text-align: center;
-	border-bottom: 3px solid var(--light-clr);
+	padding: 1rem;
+	width: 100%;
+	background-color: var(--peach-clr);
 }
 
 .form-body {
@@ -142,17 +145,18 @@ a {
 .input-control label {
     font-weight: bolder;
     font-size: 1.2rem;
+	color: var(--dark-blue);
 }
 
 .input-control input {
     padding: .5rem;
-    background-color: var(--light-clr);
-    border: none;
+    background-color: var(--gray);
+	border: 1px solid var(--dark-blue);
     border-radius: 3px;
 }
 
 .submit-btn {
-    background-color: var(--light-clr);
+    background-color: var(--green-clr);
     color: var(--dark-blue);
     padding: .4rem;
     cursor: pointer;
@@ -160,19 +164,42 @@ a {
     font-weight: bold;
     border: none;
     margin-top: .4rem;
-    transition: opacity 150ms ease-in;
+    transition: opacity 100ms ease-in;
 }
 
 .submit-btn:hover {
-    opacity: .8;
+    opacity: .9;
 }
 
 .home-pg-btn {
     text-align: center;
     text-decoration: underline;
-    color: var(--light-clr);
+    color: var(--dark-blue);
 }
 
 .home-pg-btn:hover {
     color: blue;
+}
+
+/** Error Page Styling */
+
+.error-page {
+	color: var(--light-clr);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1.3rem;
+}
+
+.error-page h1 {
+	text-align: left;
+}
+
+.error-page a {
+	font-size: 1.2rem;
+}
+
+.error-page a:hover {
+	text-decoration: underline;
+	color: blue;
 }
