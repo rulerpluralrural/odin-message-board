@@ -87,6 +87,7 @@ a {
 .message-right {
 	font-size: 0.8rem;
 	font-style: italic;
+	flex-shrink: 0;
 }
 
 .add-message {
